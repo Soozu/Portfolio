@@ -111,14 +111,6 @@ const Hero = () => {
             >
               <Instagram size={20} /> Instagram
             </a>
-            <a 
-              href="https://soozu.vercel.app/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors text-gray-700 dark:text-gray-300"
-            >
-              <ExternalLink size={20} /> Portfolio
-            </a>
           </div>
           
           <button
