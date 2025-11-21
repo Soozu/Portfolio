@@ -1,20 +1,11 @@
-import { createContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
-type ThemeContextType = {
-  isDarkMode: boolean;
-  toggleTheme: () => void;
-};
-
-export const ThemeContext = createContext<ThemeContextType>({
+export const ThemeContext = createContext({
   isDarkMode: false,
   toggleTheme: () => {},
 });
 
-type ThemeProviderProps = {
-  children: ReactNode;
-};
-
-export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     // Check if user has previously set a preference
     const savedTheme = localStorage.getItem('theme');
@@ -46,3 +37,4 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     </ThemeContext.Provider>
   );
 };
+
