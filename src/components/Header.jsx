@@ -50,13 +50,19 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-1">
-            {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
+            {[
+              { id: 'home', label: 'Home' },
+              { id: 'about', label: 'About' },
+              { id: 'skills', label: 'Skills' },
+              { id: 'featured-projects', label: 'Projects' },
+              { id: 'contact', label: 'Contact' }
+            ].map((item) => (
               <button 
-                key={item}
-                onClick={() => scrollToSection(item)}
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
                 className="cursor-target px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 relative group"
               >
-                <span className="capitalize">{item}</span>
+                <span>{item.label}</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
@@ -95,14 +101,20 @@ const Header = () => {
         }`}
       >
         <div className="px-4 py-4 space-y-2 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50">
-          {['home', 'about', 'skills', 'projects', 'contact'].map((item, index) => (
+          {[
+              { id: 'home', label: 'Home' },
+              { id: 'about', label: 'About' },
+              { id: 'skills', label: 'Skills' },
+              { id: 'featured-projects', label: 'Projects' },
+              { id: 'contact', label: 'Contact' }
+            ].map((item, index) => (
             <button 
-              key={item}
-              onClick={() => scrollToSection(item)}
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
               className="cursor-target block w-full text-left px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <span className="capitalize font-medium">{item}</span>
+              <span className="font-medium">{item.label}</span>
             </button>
           ))}
         </div>

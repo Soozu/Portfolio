@@ -62,12 +62,16 @@ const Projects = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-500/10 to-gray-600/10 rounded-full border border-gray-500/20 mb-6">
+            <Github className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+            <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Open Source</span>
+          </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-6">
-            Featured <span className="text-gradient">Projects</span>
+            GitHub <span className="text-gradient">Repositories</span>
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Here are some of my recent projects from GitHub that showcase my skills and expertise.
+            Public repositories and open-source contributions showcasing my coding journey.
           </p>
         </div>
         

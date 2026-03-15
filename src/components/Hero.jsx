@@ -10,9 +10,10 @@ const Hero = () => {
   
   const textsToType = [
     'Full Stack Developer',
-    'Python Enthusiast',
+    'IT Solutions Specialist',
     'React.js Developer',
-    'PHP Specialist'
+    'System Architect',
+    'PHP & Python Developer'
   ];
 
   useEffect(() => {
@@ -111,7 +112,7 @@ const Hero = () => {
           
           {/* Description */}
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Passionate about creating elegant solutions to complex problems through clean, efficient code.
+            Building enterprise solutions for government institutions and businesses. From face recognition systems to IT platforms, I turn complex requirements into elegant, scalable applications.
           </p>
           
           {/* Social Links */}
